@@ -10,7 +10,7 @@ class Money
     public $b = null; // price b
     function __construct($Ec)
     {
-        $this->api  = new Binance\API("3tCeYLtA6OA4fZges7JJiiR5LhCyzvJXPeB8l7DucvlPqmSl5ix7hqdKqFXTYpuu", "C9BzJJb8DNr9ZMd2lE9JDoy2Ox4eDlNi9zxxK1O4f4hOCfQgsQXUaM7BCvHp76qn");
+        $this->api  = new Binance\API("", "");
         $this->c = $Ec;
         $this->a = (float) mysqli_fetch_array(mysqli_query($this->c, "SELECT * FROM `setting` WHERE `name`='Price'"))['value'];
         $this->b = (float) mysqli_fetch_array(mysqli_query($this->c, "SELECT * FROM `setting` WHERE `name`='StopLostPrice'"))['value'];
